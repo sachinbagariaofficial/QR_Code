@@ -1,38 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+QR Code Web Application
+This project is a web application for generating and scanning QR codes.
 
-Sachin Bagaria 
+Features
+QR Code Generation: Generate QR codes from text, URLs, or other data.
+QR Code Scanning: Scan QR codes using your device's camera.
+Responsive Design: The application is designed to work seamlessly across different devices.
+Getting Started
+Install dependencies using npm:
 
-## Getting Started
+bash
+Copy code
+npm install
+Run the development server:
 
-First, run the development server:
-
-```bash
+bash
+Copy code
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open your browser and navigate to http://localhost:3000 to use the application.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Available Scripts
+dev: Start the development server.
+build: Build the production-ready application.
+start: Start the production server.
+lint: Run ESLint for code linting.
+Technologies Used
+Next.js: React framework for building server-rendered applications.
+HTML5-QRCode: Library for generating QR codes.
+qrcode.react: React component for rendering QR codes.
+React-QR-Reader: React component for reading QR codes.
+React-QR-Scanner: React component for scanning QR codes.
+Tailwind CSS: Utility-first CSS framework for styling.
+Contributing
+Contributions are welcome! Feel free to submit bug fixes, feature requests, or improvements. Please follow the Contribution Guidelines.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Author 
+Sachin Bagaria

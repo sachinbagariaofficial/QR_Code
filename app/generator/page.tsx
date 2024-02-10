@@ -98,7 +98,7 @@ export default function Generator() {
           </button>
           
         </Link>
-        <div className="flex flex-col justify-center items-center  md:flex-row gap-7">
+        <div className="flex flex-col justify-center items-center  md:flex-row gap-7 sachin-bagaria">
           <div className="form-container mt-10 order-2 md:order-1">
             <form className="form" onSubmit={(e) => createQRCode(e)}>
               {/* <div className="form-group">
