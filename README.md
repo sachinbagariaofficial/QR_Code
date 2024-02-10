@@ -42,6 +42,6 @@ To learn more about Next.js, take a look at the following resources:
 - React-QR-Reader: React component for reading QR codes.
 - Tailwind CSS: Utility-first CSS framework for styling.
 
-## TContributing
+## Contributing
 
 Contributions are welcome! Feel free to submit bug fixes, feature requests, or improvements. 
