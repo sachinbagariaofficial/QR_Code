@@ -40,9 +40,8 @@ To learn more about Next.js, take a look at the following resources:
 - HTML5-QRCode: Library for generating QR codes.
 - qrcode.react: React component for rendering QR codes.
 - React-QR-Reader: React component for reading QR codes.
-- React-QR-Scanner: React component for scanning QR codes.
 - Tailwind CSS: Utility-first CSS framework for styling.
 
-## Technologies Used
+## TContributing
 
 Contributions are welcome! Feel free to submit bug fixes, feature requests, or improvements. 
