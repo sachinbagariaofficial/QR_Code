@@ -79,7 +79,7 @@ export default function ScanPage() {
 
   return (
     <div className=" text-center mt-10  ">
-      <h1 className="text-2xl uppercase font-semibold font-cursive">
+      <h1 className="text-3xl  uppercase font-semibold ">
         QR Code Scanner
       </h1>
       <p className="text-xl mt-5 ">Scan QR codes with this handy scanner.</p>
@@ -154,3 +154,7 @@ export default function ScanPage() {
     </div>
   );
 }
+
+
+
+

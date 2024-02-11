@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { QRCodeCanvas, QRCodeSVG } from "qrcode.react";
 import Link from "next/link";
 import qrCodeImage from "@/public/assets/images/qr-code.png";
+import logo from "@/public/assets/images/Favicon.png"
+import * as htmlToImage from 'html-to-image';
 
 export default function Generator() {
   const [inputData, setInputData] = useState({
@@ -28,25 +30,27 @@ export default function Generator() {
 
   const downloadQRCode = () => {
     if (qrTextGenerate) {
-      const svgElement = document.getElementById("qrcode-svg");
-      console.log("svgElement", svgElement?.outerHTML);
+      const svgElement = document.getElementById('qrcode-svg');
       if (svgElement) {
-        const svgString = svgElement.outerHTML;
-        const blobURl = window.URL.createObjectURL(new Blob([svgString]));
-        const aTag = document.createElement("a");
-        aTag.href = blobURl;
-        aTag.href = blobURl;
-        aTag.setAttribute("download", "qrcode.svg");
-        document.body.appendChild(aTag);
-        aTag.click();
-        aTag.remove();
-
-        setQrTextGenerate("");
+        htmlToImage
+          .toPng(svgElement)
+          .then(function (dataUrl) {
+            const a = document.createElement('a');
+            a.href = dataUrl;
+            a.download = 'qrcode.png';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+          })
+          .catch(function (error) {
+            console.error('Error converting SVG to PNG', error);
+          });
       }
     } else {
-      alert("Enter Data First");
+      alert('Enter Data First');
     }
   };
+  
 
   useEffect(() => {
     const qrcodeID = setTimeout(() => {
@@ -86,7 +90,7 @@ export default function Generator() {
       ) : null}
 
       <div className="flex flex-col justify-center items-center h-full p-10 ">
-        <h1 className="text-2xl uppercase font-semibold text-center mt-4 font-family">
+        <h1 className="text-3xl uppercase font-semibold text-center mt-4 f">
           qr code generator
         </h1>
         <Link
@@ -159,14 +163,14 @@ export default function Generator() {
                   fgColor={"#000000"}
                   level={"L"}
                   includeMargin={false}
-                  imageSettings={{
-                    src: "https://sachinbagaria.onrender.com/Assets/Images/Favicon.png",
-                    x: undefined,
-                    y: undefined,
-                    height: 24,
-                    width: 24,
-                    excavate: true,
-                  }}
+                  // imageSettings={{
+                  //   src: "SB",
+                  //   x: undefined,
+                  //   y: undefined,
+                  //   height: 24,
+                  //   width: 24,
+                  //   excavate: true,
+                  // }}
                 />
               )}
             </div>

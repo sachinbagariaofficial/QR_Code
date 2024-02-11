@@ -29,8 +29,8 @@ export default function Home() {
 
         <div className="flex gap-7 flex-wrap justify-center">
 
-          <Link href="/generator"> <button>  Generator</button>  </Link>
-          <Link href="/scanner"> <button>Scanner
+          <Link href="/generator"> <button> QR Generator</button>  </Link>
+          <Link href="/scanner"> <button>QR Scanner
              </button>  </Link>
         </div>
       </div>
